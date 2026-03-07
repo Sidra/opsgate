@@ -1,0 +1,6 @@
+name: opsgate
+version: 0.1.0
+description: "A simulation-based reliability gate for enterprise agents. Measures and improves long-horizon tool orchestration with deterministic rewards."
+action_type: ToolCall
+observation_type: ToolResult
+state_type: EpisodeState

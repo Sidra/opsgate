@@ -1,0 +1,12 @@
+# OpsGate — Local development dependencies
+openenv-core>=0.2.1
+fastapi
+uvicorn[standard]
+
+# Training (install on GPU instance only)
+# unsloth
+# trl
+# vllm
+# wandb
+# openpipe-art
+# matplotlib
