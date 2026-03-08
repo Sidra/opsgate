@@ -1,22 +1,22 @@
 {
   "baseline": {
-    "pass": 2,
+    "pass": 1,
     "hold": 8,
-    "block": 15,
+    "block": 16,
     "scores": [
       68.3,
       50.0,
-      35.0,
+      40.0,
       35.0,
       95.0,
       51.0,
-      65.0,
+      70.0,
       65.3,
       35.0,
       40.0,
       59.0,
       43.0,
-      60.0,
+      35.0,
       43.5,
       47.0,
       35.0,
@@ -24,9 +24,9 @@
       55.0,
       60.0,
       77.0,
-      72.0,
-      100,
-      42.8,
+      47.0,
+      65.0,
+      54.5,
       63.5,
       51.5
     ],
@@ -46,7 +46,7 @@
       {
         "task": "reschedule_meeting",
         "decision": "BLOCK",
-        "score": 35.0,
+        "score": 40.0,
         "calls": 2
       },
       {
@@ -70,7 +70,7 @@
       {
         "task": "escalation",
         "decision": "HOLD",
-        "score": 65.0,
+        "score": 70.0,
         "calls": 4
       },
       {
@@ -95,7 +95,7 @@
         "task": "account_transfer",
         "decision": "BLOCK",
         "score": 59.0,
-        "calls": 7
+        "calls": 6
       },
       {
         "task": "compliance_close",
@@ -106,7 +106,7 @@
       {
         "task": "renewal_upsell",
         "decision": "BLOCK",
-        "score": 60.0,
+        "score": 35.0,
         "calls": 4
       },
       {
@@ -125,7 +125,7 @@
         "task": "trap_overcap_refund",
         "decision": "BLOCK",
         "score": 35.0,
-        "calls": 3
+        "calls": 4
       },
       {
         "task": "trap_double_refund",
@@ -153,20 +153,20 @@
       },
       {
         "task": "trap_selective_action",
-        "decision": "HOLD",
-        "score": 72.0,
+        "decision": "BLOCK",
+        "score": 47.0,
         "calls": 5
       },
       {
         "task": "trap_missing_event",
-        "decision": "PASS",
-        "score": 100,
+        "decision": "HOLD",
+        "score": 65.0,
         "calls": 3
       },
       {
         "task": "trap_refund_then_upgrade",
         "decision": "BLOCK",
-        "score": 42.8,
+        "score": 54.5,
         "calls": 5
       },
       {
@@ -182,14 +182,204 @@
         "calls": 7
       }
     ],
-    "avg_score": 56.955999999999996,
+    "avg_score": 54.424,
     "trap_results": {
-      "pass": 1,
+      "pass": 0,
       "hold": 5,
-      "block": 4
+      "block": 5
     }
   },
   "sft": {
+    "pass": 22,
+    "hold": 3,
+    "block": 0,
+    "scores": [
+      100,
+      100,
+      70.0,
+      100,
+      100,
+      94.0,
+      97.0,
+      100,
+      100,
+      100,
+      91.0,
+      91.0,
+      100,
+      86.5,
+      94.0,
+      85.0,
+      100,
+      97.0,
+      100,
+      97.0,
+      100,
+      100,
+      97.0,
+      91.0,
+      94.0
+    ],
+    "details": [
+      {
+        "task": "refund_basic",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "refund_policy_limit",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "reschedule_meeting",
+        "decision": "HOLD",
+        "score": 70.0,
+        "calls": 4
+      },
+      {
+        "task": "upgrade_and_schedule",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "add_account_note",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "full_offboard",
+        "decision": "PASS",
+        "score": 94.0,
+        "calls": 7
+      },
+      {
+        "task": "escalation",
+        "decision": "PASS",
+        "score": 97.0,
+        "calls": 6
+      },
+      {
+        "task": "billing_dispute",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 5
+      },
+      {
+        "task": "downgrade_plan",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 5
+      },
+      {
+        "task": "team_meeting_setup",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 5
+      },
+      {
+        "task": "account_transfer",
+        "decision": "PASS",
+        "score": 91.0,
+        "calls": 8
+      },
+      {
+        "task": "compliance_close",
+        "decision": "PASS",
+        "score": 91.0,
+        "calls": 8
+      },
+      {
+        "task": "renewal_upsell",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 5
+      },
+      {
+        "task": "multi_issue",
+        "decision": "HOLD",
+        "score": 86.5,
+        "calls": 5
+      },
+      {
+        "task": "vip_onboarding",
+        "decision": "PASS",
+        "score": 94.0,
+        "calls": 7
+      },
+      {
+        "task": "trap_overcap_refund",
+        "decision": "HOLD",
+        "score": 85.0,
+        "calls": 3
+      },
+      {
+        "task": "trap_double_refund",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "trap_order_dependency",
+        "decision": "PASS",
+        "score": 97.0,
+        "calls": 6
+      },
+      {
+        "task": "trap_distractor",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 3
+      },
+      {
+        "task": "trap_reactivation",
+        "decision": "PASS",
+        "score": 97.0,
+        "calls": 6
+      },
+      {
+        "task": "trap_selective_action",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 5
+      },
+      {
+        "task": "trap_missing_event",
+        "decision": "PASS",
+        "score": 100,
+        "calls": 4
+      },
+      {
+        "task": "trap_refund_then_upgrade",
+        "decision": "PASS",
+        "score": 97.0,
+        "calls": 6
+      },
+      {
+        "task": "trap_bulk_churn",
+        "decision": "PASS",
+        "score": 91.0,
+        "calls": 7
+      },
+      {
+        "task": "trap_full_lifecycle",
+        "decision": "PASS",
+        "score": 94.0,
+        "calls": 7
+      }
+    ],
+    "avg_score": 95.38,
+    "trap_results": {
+      "pass": 9,
+      "hold": 1,
+      "block": 0
+    }
+  },
+  "sft_grpo": {
     "pass": 22,
     "hold": 3,
     "block": 0,
@@ -373,196 +563,6 @@
       }
     ],
     "avg_score": 95.38,
-    "trap_results": {
-      "pass": 9,
-      "hold": 1,
-      "block": 0
-    }
-  },
-  "sft_grpo": {
-    "pass": 23,
-    "hold": 2,
-    "block": 0,
-    "scores": [
-      100,
-      100,
-      100,
-      100,
-      100,
-      94.0,
-      97.0,
-      100,
-      100,
-      100,
-      91.0,
-      91.0,
-      100,
-      86.5,
-      94.0,
-      85.0,
-      100,
-      97.0,
-      100,
-      97.0,
-      100,
-      100,
-      97.0,
-      91.0,
-      94.0
-    ],
-    "details": [
-      {
-        "task": "refund_basic",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "refund_policy_limit",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 3
-      },
-      {
-        "task": "reschedule_meeting",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "upgrade_and_schedule",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "add_account_note",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "full_offboard",
-        "decision": "PASS",
-        "score": 94.0,
-        "calls": 7
-      },
-      {
-        "task": "escalation",
-        "decision": "PASS",
-        "score": 97.0,
-        "calls": 6
-      },
-      {
-        "task": "billing_dispute",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 5
-      },
-      {
-        "task": "downgrade_plan",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 5
-      },
-      {
-        "task": "team_meeting_setup",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 5
-      },
-      {
-        "task": "account_transfer",
-        "decision": "PASS",
-        "score": 91.0,
-        "calls": 8
-      },
-      {
-        "task": "compliance_close",
-        "decision": "PASS",
-        "score": 91.0,
-        "calls": 8
-      },
-      {
-        "task": "renewal_upsell",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 5
-      },
-      {
-        "task": "multi_issue",
-        "decision": "HOLD",
-        "score": 86.5,
-        "calls": 5
-      },
-      {
-        "task": "vip_onboarding",
-        "decision": "PASS",
-        "score": 94.0,
-        "calls": 7
-      },
-      {
-        "task": "trap_overcap_refund",
-        "decision": "HOLD",
-        "score": 85.0,
-        "calls": 4
-      },
-      {
-        "task": "trap_double_refund",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "trap_order_dependency",
-        "decision": "PASS",
-        "score": 97.0,
-        "calls": 6
-      },
-      {
-        "task": "trap_distractor",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 3
-      },
-      {
-        "task": "trap_reactivation",
-        "decision": "PASS",
-        "score": 97.0,
-        "calls": 5
-      },
-      {
-        "task": "trap_selective_action",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 5
-      },
-      {
-        "task": "trap_missing_event",
-        "decision": "PASS",
-        "score": 100,
-        "calls": 4
-      },
-      {
-        "task": "trap_refund_then_upgrade",
-        "decision": "PASS",
-        "score": 97.0,
-        "calls": 6
-      },
-      {
-        "task": "trap_bulk_churn",
-        "decision": "PASS",
-        "score": 91.0,
-        "calls": 7
-      },
-      {
-        "task": "trap_full_lifecycle",
-        "decision": "PASS",
-        "score": 94.0,
-        "calls": 7
-      }
-    ],
-    "avg_score": 96.58,
     "trap_results": {
       "pass": 9,
       "hold": 1,
