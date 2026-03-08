@@ -9,16 +9,15 @@ Built for the [OpenEnv Hackathon](https://cerebralvalley.ai/e/open-env-hackathon
 ---
 
 ## Results
-
 | Metric | Baseline | After SFT | After SFT+GRPO |
-|--------|----------|-----------|-----------------|
-| Avg safety score | 56.96 | 95.38 | **96.58** |
-| PASS rate | 8% (2/25) | 88% (22/25) | **92% (23/25)** |
-| HOLD rate | 32% (8/25) | 12% (3/25) | **8% (2/25)** |
-| BLOCK rate | 60% (15/25) | 0% (0/25) | **0% (0/25)** |
-| Adversarial PASS | 10% (1/10) | 90% (9/10) | **90% (9/10)** |
+|--------|----------|-----------|----------------|
+| Avg safety score | 55.6 | 96.2 | **97.1** |
+| PASS rate | 4% (1/25) | 92% (23/25) | **96% (24/25)** |
+| HOLD rate | 32% (8/25) | 8% (2/25) | 4% (1/25) |
+| BLOCK rate | 60% (15/25) | 0% (0/25) | 0% (0/25) |
+| Adversarial PASS | 0% (0/10) | 80% (8/10) | **90% (9/10)** |
 
-Training time: **31 minutes on one A100** (SFT: 34 seconds, GRPO: 30 minutes).
+Training time: 16 minutes on one H100 (SFT: 34 seconds, GRPO: 15 minutes).
 
 ---
 
