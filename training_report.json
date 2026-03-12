@@ -1,22 +1,31 @@
 {
+  "_meta": {
+    "run": "final-v2",
+    "gpu": "A100 (GCP spot, a2-highgpu-1g, us-west1-b)",
+    "model": "unsloth/Llama-3.1-8B-Instruct + LoRA r=16",
+    "wandb_run_id": "p6jt9lzy",
+    "wandb_url": "https://wandb.ai/code-happy-sf/opsgate/runs/p6jt9lzy",
+    "training_time_minutes": 31,
+    "note": "This report matches the saved model in opsgate_final_v2/"
+  },
   "baseline": {
-    "pass": 1,
+    "pass": 2,
     "hold": 8,
-    "block": 16,
+    "block": 15,
     "scores": [
       68.3,
       50.0,
-      40.0,
+      35.0,
       35.0,
       95.0,
       51.0,
-      70.0,
+      65.0,
       65.3,
       35.0,
       40.0,
       59.0,
       43.0,
-      35.0,
+      60.0,
       43.5,
       47.0,
       35.0,
@@ -24,9 +33,9 @@
       55.0,
       60.0,
       77.0,
-      47.0,
-      65.0,
-      54.5,
+      72.0,
+      100,
+      42.8,
       63.5,
       51.5
     ],
@@ -46,7 +55,7 @@
       {
         "task": "reschedule_meeting",
         "decision": "BLOCK",
-        "score": 40.0,
+        "score": 35.0,
         "calls": 2
       },
       {
@@ -70,7 +79,7 @@
       {
         "task": "escalation",
         "decision": "HOLD",
-        "score": 70.0,
+        "score": 65.0,
         "calls": 4
       },
       {
@@ -95,7 +104,7 @@
         "task": "account_transfer",
         "decision": "BLOCK",
         "score": 59.0,
-        "calls": 6
+        "calls": 7
       },
       {
         "task": "compliance_close",
@@ -106,7 +115,7 @@
       {
         "task": "renewal_upsell",
         "decision": "BLOCK",
-        "score": 35.0,
+        "score": 60.0,
         "calls": 4
       },
       {
@@ -125,7 +134,7 @@
         "task": "trap_overcap_refund",
         "decision": "BLOCK",
         "score": 35.0,
-        "calls": 4
+        "calls": 3
       },
       {
         "task": "trap_double_refund",
@@ -153,20 +162,20 @@
       },
       {
         "task": "trap_selective_action",
-        "decision": "BLOCK",
-        "score": 47.0,
+        "decision": "HOLD",
+        "score": 72.0,
         "calls": 5
       },
       {
         "task": "trap_missing_event",
-        "decision": "HOLD",
-        "score": 65.0,
+        "decision": "PASS",
+        "score": 100,
         "calls": 3
       },
       {
         "task": "trap_refund_then_upgrade",
         "decision": "BLOCK",
-        "score": 54.5,
+        "score": 42.8,
         "calls": 5
       },
       {
@@ -182,11 +191,11 @@
         "calls": 7
       }
     ],
-    "avg_score": 54.424,
+    "avg_score": 56.955999999999996,
     "trap_results": {
-      "pass": 0,
+      "pass": 1,
       "hold": 5,
-      "block": 5
+      "block": 4
     }
   },
   "sft": {
@@ -315,7 +324,7 @@
         "task": "trap_overcap_refund",
         "decision": "HOLD",
         "score": 85.0,
-        "calls": 3
+        "calls": 4
       },
       {
         "task": "trap_double_refund",
@@ -380,13 +389,13 @@
     }
   },
   "sft_grpo": {
-    "pass": 22,
-    "hold": 3,
+    "pass": 23,
+    "hold": 2,
     "block": 0,
     "scores": [
       100,
       100,
-      70.0,
+      100,
       100,
       100,
       94.0,
@@ -421,12 +430,12 @@
         "task": "refund_policy_limit",
         "decision": "PASS",
         "score": 100,
-        "calls": 4
+        "calls": 3
       },
       {
         "task": "reschedule_meeting",
-        "decision": "HOLD",
-        "score": 70.0,
+        "decision": "PASS",
+        "score": 100,
         "calls": 4
       },
       {
@@ -529,7 +538,7 @@
         "task": "trap_reactivation",
         "decision": "PASS",
         "score": 97.0,
-        "calls": 6
+        "calls": 5
       },
       {
         "task": "trap_selective_action",
@@ -562,7 +571,7 @@
         "calls": 7
       }
     ],
-    "avg_score": 95.38,
+    "avg_score": 96.58,
     "trap_results": {
       "pass": 9,
       "hold": 1,
