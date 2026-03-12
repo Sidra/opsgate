@@ -22,7 +22,7 @@ Training time: **31 minutes on one A100** (SFT: 34 seconds, GRPO: 30 minutes). N
 
 ### Training Runs Comparison
 
-We ran 4 training configurations across A100 and H100 GPUs. All logs are on [W&B](https://wandb.ai/code-happy-sf/opsgate).
+Trained across 4 configurations on A100 and H100 GPUs. All logs are on [W&B](https://wandb.ai/code-happy-sf/opsgate).
 
 | Run | GPU | PASS | Avg Score | GRPO improved over SFT? | W&B |
 |-----|-----|------|-----------|--------------------------|-----|
@@ -149,6 +149,27 @@ The agent must:
 │                      │     │                       │     │  + audit trail    │
 └──────────────────────┘     └──────────────────────┘     └──────────────────┘
 ```
+
+### What happens on one step
+
+1. Agent sends a JSON tool call: `{"tool": "billing", "action": "issue_refund", "parameters": {"user_id": 101, "amount": 79.99}}`
+2. Environment routes to the correct SQLite backend (`billing.execute("issue_refund", ...)`)
+3. Backend enforces constraints — e.g., refund capped at $500, no double-refunds on already-refunded invoices
+4. If policy violated, the violation is logged and penalized in final scoring
+5. Tool result returned to agent with success/error status
+6. Step counter incremented; episode ends on `submit` or after `max_steps` (15)
+7. On episode end, the **verifier** compares actual DB state against target state across all 4 tools
+8. Verifier computes 6-category weighted score, verdict (PASS/HOLD/BLOCK), and full audit trail
+
+### Available tool actions
+
+| Tool | Actions | Constraints |
+|------|---------|-------------|
+| **CRM** | `get_user`, `update_user`, `add_note`, `log_interaction` | User must exist |
+| **Billing** | `get_invoice`, `issue_refund` | $500 refund cap, no double-refunds |
+| **Calendar** | `list_events`, `create_event`, `reschedule_event`, `cancel_event` | Event must exist for mutations |
+| **Email** | `send` | Requires `to`, `subject`, `body` fields |
+| **System** | `submit` | Ends episode, triggers verification |
 
 At the end of each episode, OpsGate returns:
 - **PASS / HOLD / BLOCK** verdict
@@ -310,6 +331,17 @@ opsgate/
     └── per_task_scores.png    # Per-task baseline vs trained
 ```
 
+## Why This Matters
+
+Enterprise agents are increasingly deployed to handle real workflows — refunds, scheduling, account management — but most evaluation benchmarks test text generation, not multi-step tool orchestration. OpsGate addresses this gap:
+
+- **Realistic failure modes.** Agents fail by calling tools in the wrong order, violating business rules, or missing notifications — not by generating bad text. OpsGate tests exactly these failure modes.
+- **Deterministic, reproducible evaluation.** No LLM judge means no variance between runs. The same actions always produce the same score. This makes training signal clean and results comparable.
+- **RL-ready reward signal.** The graduated reward function provides dense signal for GRPO training, not just pass/fail. An agent that gets the format right but misses a step gets partial credit, which is critical for RL convergence.
+- **Adversarial robustness.** 40% of tasks are adversarial traps. A production-ready agent needs to say "no" to invalid requests, not just complete valid ones.
+
+Suitable for: agent planning benchmarks, RL experiments on tool orchestration, safety evaluation of enterprise AI deployments.
+
 ## Built With
 
 - [OpenEnv](https://github.com/meta-pytorch/OpenEnv) 0.2.1 — Gymnasium-style RL environment framework
@@ -322,6 +354,6 @@ opsgate/
 
 ## Author
 
-Sidra Miconi — [@SidraMiconi](https://x.com/SidraMiconi)
+Built by Sidra Miconi — [@SidraMiconi](https://x.com/SidraMiconi)
 
-Built for the OpenEnv Hackathon SF, March 7-8, 2026.
+Solo project for the OpenEnv Hackathon SF, March 7-8, 2026.
