@@ -39,6 +39,11 @@ Trained across 4 configurations on A100 and H100 GPUs. All logs are on [W&B](htt
 
 ## Architecture
 
+![OpsGate Architecture](assets/opsgate-architecture.svg)
+
+<details>
+<summary>ASCII version</summary>
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                         OpsGate Environment                            │
@@ -78,6 +83,7 @@ Trained across 4 configurations on A100 and H100 GPUs. All logs are on [W&B](htt
 │                            └───────────────────┘                       │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
+</details>
 
 ## Training Pipeline
 
@@ -120,6 +126,8 @@ Trained across 4 configurations on A100 and H100 GPUs. All logs are on [W&B](htt
 
 ## How It Works
 
+![OpsGate Episode Flow](assets/opsgate-episode-flow.svg)
+
 Given a task like:
 
 > "Cancel customer X's renewal, issue a valid prorated refund, update the CRM record, and notify the account manager."
@@ -130,6 +138,9 @@ The agent must:
 3. Respect business rules (e.g., $500 refund cap)
 4. Notify all stakeholders
 5. Submit when done
+
+<details>
+<summary>ASCII version</summary>
 
 ```
 ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────┐
@@ -151,6 +162,7 @@ The agent must:
 │                      │     │                       │     │  + audit trail    │
 └──────────────────────┘     └──────────────────────┘     └──────────────────┘
 ```
+</details>
 
 ### What happens on one step
 
