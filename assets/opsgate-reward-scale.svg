@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" viewBox="0 0 680 340" style="font-family: system-ui, -apple-system, sans-serif; background: #0c0c0f;">
+<text x="340" y="22" text-anchor="middle" dominant-baseline="central" fill="#e8e6e3" font-size="14" font-weight="500">Graduated reward function</text>
+<text x="340" y="42" text-anchor="middle" dominant-baseline="central" fill="#8a8894" font-size="12">Partial credit gives GRPO a smooth gradient to climb — not just pass/fail</text>
+<!-- Scale boxes -->
+<rect x="40" y="66" width="100" height="46" rx="6" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="90" y="82" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="14" font-weight="500">-0.5</text>
+<text x="90" y="100" text-anchor="middle" dominant-baseline="central" fill="#F09595" font-size="11">Garbage</text>
+
+<rect x="148" y="66" width="100" height="46" rx="6" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="198" y="82" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="14" font-weight="500">-0.3</text>
+<text x="198" y="100" text-anchor="middle" dominant-baseline="central" fill="#F09595" font-size="11">Wrong schema</text>
+
+<rect x="256" y="66" width="100" height="46" rx="6" fill="#1e2028" stroke="#2d2f3a" stroke-width="0.5"/>
+<text x="306" y="82" text-anchor="middle" dominant-baseline="central" fill="#e8e6e3" font-size="14" font-weight="500">0.0</text>
+<text x="306" y="100" text-anchor="middle" dominant-baseline="central" fill="#8a8894" font-size="11">Incomplete</text>
+
+<rect x="364" y="66" width="100" height="46" rx="6" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/>
+<text x="414" y="82" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="14" font-weight="500">0.1–0.9</text>
+<text x="414" y="100" text-anchor="middle" dominant-baseline="central" fill="#FAC775" font-size="11">Partial</text>
+
+<rect x="472" y="66" width="100" height="46" rx="6" fill="#173404" stroke="#639922" stroke-width="0.5"/>
+<text x="522" y="82" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="14" font-weight="500">1.0</text>
+<text x="522" y="100" text-anchor="middle" dominant-baseline="central" fill="#97C459" font-size="11">Full PASS</text>
+
+<text x="600" y="89" dominant-baseline="central" fill="#8a8894" font-size="11">Better →</text>
+
+<!-- Examples -->
+<text x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#e8e6e3" font-size="14" font-weight="500">Example agent outputs at each level</text>
+
+<rect x="40" y="154" width="290" height="44" rx="6" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="55" y="170" dominant-baseline="central" fill="#FCEBEB" font-size="13" font-weight="500">Reward: -0.5</text>
+<text x="55" y="188" dominant-baseline="central" fill="#F09595" font-size="11">"I'll process that refund for you!"</text>
+<text x="345" y="176" dominant-baseline="central" fill="#8a8894" font-size="11">Free-form text, no JSON</text>
+
+<rect x="40" y="206" width="290" height="44" rx="6" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="55" y="222" dominant-baseline="central" fill="#FCEBEB" font-size="13" font-weight="500">Reward: -0.3</text>
+<text x="55" y="240" dominant-baseline="central" fill="#F09595" font-size="11">{"refund": true, "amount": 89}</text>
+<text x="345" y="228" dominant-baseline="central" fill="#8a8894" font-size="11">JSON but missing tool/action fields</text>
+
+<rect x="40" y="258" width="290" height="44" rx="6" fill="#1e2028" stroke="#2d2f3a" stroke-width="0.5"/>
+<text x="55" y="274" dominant-baseline="central" fill="#e8e6e3" font-size="13" font-weight="500">Reward: 0.0</text>
+<text x="55" y="292" dominant-baseline="central" fill="#8a8894" font-size="11">{"tool":"billing","action":"get_invoice"}</text>
+<text x="345" y="280" dominant-baseline="central" fill="#8a8894" font-size="11">Valid call but task incomplete</text>
+
+<rect x="40" y="310" width="290" height="28" rx="6" fill="#173404" stroke="#639922" stroke-width="0.5"/>
+<text x="55" y="324" dominant-baseline="central" fill="#EAF3DE" font-size="13" font-weight="500">Reward: 1.0</text>
+<text x="345" y="324" dominant-baseline="central" fill="#8a8894" font-size="11">All calls correct → score ≥90 → PASS</text>
+</svg>

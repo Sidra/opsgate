@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" viewBox="0 0 680 420" style="font-family: system-ui, -apple-system, sans-serif; background: #0c0c0f;">
+<text x="170" y="24" text-anchor="middle" dominant-baseline="central" fill="#e8e6e3" font-size="14" font-weight="500">Baseline (before training)</text>
+<text x="510" y="24" text-anchor="middle" dominant-baseline="central" fill="#e8e6e3" font-size="14" font-weight="500">After SFT + GRPO</text>
+<text x="335" y="24" text-anchor="middle" dominant-baseline="central" fill="#8a8894" font-size="14">→</text>
+
+<!-- Baseline standard (15 cells) -->
+<rect x="60" y="44" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="82" y="62" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">68</text>
+<rect x="108" y="44" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="130" y="62" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">50</text>
+<rect x="156" y="44" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="178" y="62" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">35</text>
+<rect x="204" y="44" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="226" y="62" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">60</text>
+<rect x="252" y="44" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="274" y="62" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">60</text>
+<rect x="60" y="84" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="82" y="102" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">69</text>
+<rect x="108" y="84" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="130" y="102" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">65</text>
+<rect x="156" y="84" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="178" y="102" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">65</text>
+<rect x="204" y="84" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="226" y="102" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">60</text>
+<rect x="252" y="84" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="274" y="102" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">40</text>
+<rect x="60" y="124" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="82" y="142" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">59</text>
+<rect x="108" y="124" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="130" y="142" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">61</text>
+<rect x="156" y="124" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="178" y="142" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">80</text>
+<rect x="204" y="124" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="226" y="142" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">41</text>
+<rect x="252" y="124" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="274" y="142" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">47</text>
+
+<!-- Baseline traps (10) -->
+<rect x="60" y="176" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="82" y="194" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">35</text>
+<rect x="108" y="176" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="130" y="194" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">70</text>
+<rect x="156" y="176" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="178" y="194" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">50</text>
+<rect x="204" y="176" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="226" y="194" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">60</text>
+<rect x="252" y="176" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="274" y="194" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">77</text>
+<rect x="60" y="216" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="82" y="234" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">71</text>
+<rect x="108" y="216" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="130" y="234" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">65</text>
+<rect x="156" y="216" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="178" y="234" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">55</text>
+<rect x="204" y="216" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="226" y="234" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">64</text>
+<rect x="252" y="216" width="44" height="36" rx="3" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/><text x="274" y="234" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="12">52</text>
+
+<!-- Baseline summary -->
+<rect x="60" y="268" width="236" height="36" rx="6" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="178" y="286" text-anchor="middle" dominant-baseline="central" fill="#FCEBEB" font-size="14" font-weight="500">1/25 PASS · 15 BLOCK · Avg 55.6</text>
+
+<!-- Trained standard (15 cells - all green) -->
+<rect x="400" y="44" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="422" y="62" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="448" y="44" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="470" y="62" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="496" y="44" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="518" y="62" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="544" y="44" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="566" y="62" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="592" y="44" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="614" y="62" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="400" y="84" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="422" y="102" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">94</text>
+<rect x="448" y="84" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="470" y="102" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">97</text>
+<rect x="496" y="84" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="518" y="102" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="544" y="84" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="566" y="102" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="592" y="84" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="614" y="102" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="400" y="124" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="422" y="142" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">91</text>
+<rect x="448" y="124" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="470" y="142" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">91</text>
+<rect x="496" y="124" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="518" y="142" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="544" y="124" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="566" y="142" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="592" y="124" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="614" y="142" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">94</text>
+
+<!-- Trained traps (10) -->
+<rect x="400" y="176" width="44" height="36" rx="3" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/><text x="422" y="194" text-anchor="middle" dominant-baseline="central" fill="#FAEEDA" font-size="12">85</text>
+<rect x="448" y="176" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="470" y="194" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="496" y="176" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="518" y="194" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">97</text>
+<rect x="544" y="176" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="566" y="194" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="592" y="176" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="614" y="194" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">97</text>
+<rect x="400" y="216" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="422" y="234" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="448" y="216" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="470" y="234" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">100</text>
+<rect x="496" y="216" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="518" y="234" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">97</text>
+<rect x="544" y="216" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="566" y="234" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">91</text>
+<rect x="592" y="216" width="44" height="36" rx="3" fill="#173404" stroke="#639922" stroke-width="0.5"/><text x="614" y="234" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="12">94</text>
+
+<!-- Trained summary -->
+<rect x="400" y="268" width="236" height="36" rx="6" fill="#173404" stroke="#639922" stroke-width="0.5"/>
+<text x="518" y="286" text-anchor="middle" dominant-baseline="central" fill="#EAF3DE" font-size="14" font-weight="500">24/25 PASS · 0 BLOCK · Avg 97.1</text>
+
+<!-- Legend -->
+<rect x="180" y="322" width="14" height="14" rx="2" fill="#173404" stroke="#639922" stroke-width="0.5"/>
+<text x="200" y="329" dominant-baseline="central" fill="#8a8894" font-size="12">PASS (≥90)</text>
+<rect x="280" y="322" width="14" height="14" rx="2" fill="#412402" stroke="#EF9F27" stroke-width="0.5"/>
+<text x="300" y="329" dominant-baseline="central" fill="#8a8894" font-size="12">HOLD (60-89)</text>
+<rect x="390" y="322" width="14" height="14" rx="2" fill="#501313" stroke="#E24B4A" stroke-width="0.5"/>
+<text x="410" y="329" dominant-baseline="central" fill="#8a8894" font-size="12">BLOCK (&lt;60)</text>
+
+<text x="340" y="366" text-anchor="middle" fill="#e8e6e3" font-size="14" font-weight="500">+41.5 point improvement in 16 minutes on H100</text>
+<text x="340" y="390" text-anchor="middle" fill="#8a8894" font-size="12">The reward signal is code, not vibes.</text>
+</svg>
