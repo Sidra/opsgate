@@ -2,9 +2,11 @@
 
 **A simulation-based reliability gate for enterprise agents.**
 
-Built for the [OpenEnv Hackathon](https://cerebralvalley.ai/e/open-env-hackathon) | [Training Notebook](https://colab.research.google.com/drive/1Y8KosYrTjjnQzt7FNMQ0knstU3CbskDw) | [W&B Dashboard](https://wandb.ai/code-happy-sf/opsgate) | [HF Space](https://huggingface.co/spaces/SidraMiconi/opsgate)
+By [Sidra Miconi](https://x.com/SidraMiconi) | [Demo Video](https://www.youtube.com/watch?v=B-Gm2p7JQyU) | [Training Notebook](https://colab.research.google.com/drive/1Y8KosYrTjjnQzt7FNMQ0knstU3CbskDw) | [W&B Dashboard](https://wandb.ai/code-happy-sf/opsgate) | [HF Space](https://huggingface.co/spaces/SidraMiconi/opsgate)
 
-**Problem Statement 3.1: World Modeling -> Professional Tasks** | **Scaler AI Labs Sub-Theme: Multi-App RL Environment for Enterprise Workflows**
+[![OpsGate Demo](assets/demo_thumbnail.jpg)](https://www.youtube.com/watch?v=B-Gm2p7JQyU)
+
+Built for the [OpenEnv Hackathon](https://cerebralvalley.ai/e/open-env-hackathon) | **Problem Statement 3.1: World Modeling -> Professional Tasks** | **Scaler AI Labs Sub-Theme: Multi-App RL Environment for Enterprise Workflows**
 
 ---
 
@@ -27,7 +29,7 @@ Trained across 4 configurations on A100 and H100 GPUs. All logs are on [W&B](htt
 | Run | GPU | PASS | Avg Score | GRPO improved over SFT? | W&B |
 |-----|-----|------|-----------|--------------------------|-----|
 | `final-v2` (saved model) | A100 (GCP spot) | **23/25** | **96.58** | Yes (+1.2) | [p6jt9lzy](https://wandb.ai/code-happy-sf/opsgate/runs/p6jt9lzy) |
-| Colab (best result) | T4 (Colab) | **24/25** | **97.1** | Yes (+0.9) | [notebook](https://colab.research.google.com/drive/1Y8KosYrTjjnQzt7FNMQ0knstU3CbskDw) |
+| Colab (best result) | H100 (Colab) | **24/25** | **97.1** | Yes (+0.9) | [notebook](https://colab.research.google.com/drive/1Y8KosYrTjjnQzt7FNMQ0knstU3CbskDw) |
 | `h100-northflank` | H100 (Northflank) | 22/25 | 95.38 | No | [p0g9wxw5](https://wandb.ai/code-happy-sf/opsgate/runs/p0g9wxw5) |
 | `h100-extended` | H100 (10 epochs) | 22/25 | 95.38 | No | [h08f9n6t](https://wandb.ai/code-happy-sf/opsgate/runs/h08f9n6t) |
 
@@ -354,6 +356,4 @@ Suitable for: agent planning benchmarks, RL experiments on tool orchestration, s
 
 ## Author
 
-Built by Sidra Miconi — [@SidraMiconi](https://x.com/SidraMiconi)
-
-Solo project for the OpenEnv Hackathon SF, March 7-8, 2026.
+Solo project by [Sidra Miconi](https://x.com/SidraMiconi) for the OpenEnv Hackathon SF, March 7-8, 2026.
